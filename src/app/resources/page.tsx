@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import PageHeader from "@/components/PageHeader";
 import { Section, Card, InfoBanner } from "@/components/ui";
+import Icon from "@/components/Icon";
 
 export const metadata: Metadata = { title: "Student Resources" };
 
@@ -33,6 +34,27 @@ export default function ResourcesPage() {
           <Card title="Using InSite">
             Course registration, transcripts, and managing your student profile.
           </Card>
+        </div>
+      </Section>
+
+      <Section title="Transfer">
+        <div className="rounded-2xl border border-primary/30 bg-primary-soft p-6 sm:flex sm:items-center sm:justify-between sm:gap-6">
+          <div>
+            <h3 className="text-lg font-semibold">DVC Transfer</h3>
+            <p className="mt-1 text-sm text-muted">
+              Planning to transfer to a 4-year university? Deadlines, requirements,
+              and step-by-step guides — all in one place.
+            </p>
+          </div>
+          <a
+            href="https://www.dvctransfer.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-4 inline-flex shrink-0 items-center gap-2 rounded-xl bg-primary px-6 py-3.5 text-base font-semibold text-white shadow-sm transition-colors hover:bg-primary-hover sm:mt-0"
+          >
+            Visit dvctransfer.com
+            <Icon name="arrow" className="h-5 w-5" />
+          </a>
         </div>
       </Section>
 
