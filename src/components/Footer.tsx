@@ -48,7 +48,7 @@ export default function Footer() {
           <p>
             © {new Date().getFullYear()} {site.fullName} (KSA)
           </p>
-          <p>Built with Next.js · Cloudflare Pages</p>
+          <p>Built by {site.credits}</p>
         </div>
       </div>
     </footer>

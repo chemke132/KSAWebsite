@@ -6,6 +6,7 @@ export const site = {
   college: "Diablo Valley College",
   tagline:
     "Resources, volunteering, and projects — all in one place for our KSA community.",
+  credits: "Davin Kim & the KSA Web Team",
 };
 
 export type NavItem = {
