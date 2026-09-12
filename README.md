@@ -25,12 +25,10 @@ npm run lint    # lint
 | Route | Contents |
 | --- | --- |
 | `/` | Home (category overview) |
-| `/resources` | Student resources — planner, Canvas & InSite guides |
+| `/resources` | Student resources — planner, Canvas & InSite guides, health & insurance |
 | `/volunteer` | Volunteer — org list, contacts, application format |
-| `/projects` | Projects — individual & group project journals |
+| `/showcase` | Showcase — student project write-ups in journal form (Notion-powered) |
 | `/mentorship` | Mentor / mentee program |
-| `/health` | Health & insurance — nearby clinics, insurance tips |
-| `/journal` | Journal reports (Notion-powered) |
 
 Key files:
 
@@ -57,16 +55,16 @@ Connect the repo so Cloudflare builds and deploys automatically on every push.
 
 ## Notion integration
 
-Journal reports are written in a Notion database and published to the site
-automatically.
+Showcase posts (project write-ups in journal form) are written in a Notion
+database and published to the site automatically.
 
 1. `npm install @notionhq/client`
 2. Create a Notion integration, issue a token, and share the target database with it
 3. Set environment variables (in `.env.local` and in Cloudflare Pages):
    - `NOTION_TOKEN`
-   - `NOTION_JOURNAL_DB_ID`
-4. Implement the `TODO` inside `getJournalEntries()` in `src/lib/notion.ts`
-5. For pages that use server fetch (`src/app/journal/page.tsx`), add
+   - `NOTION_SHOWCASE_DB_ID`
+4. Implement the `TODO` inside `getShowcasePosts()` in `src/lib/notion.ts`
+5. For pages that use server fetch (`src/app/showcase/page.tsx`), add
    `export const runtime = "edge"` when deploying on Cloudflare Pages
 
-See the `JournalEntry` type in `src/lib/notion.ts` for the expected data shape.
+See the `ShowcasePost` type in `src/lib/notion.ts` for the expected data shape.

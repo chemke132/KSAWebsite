@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { categories, site } from "@/lib/site";
 import Icon from "@/components/Icon";
+import Logo from "@/components/Logo";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -17,9 +18,7 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur">
       <nav className="container-page flex h-16 items-center justify-between gap-4">
         <Link href="/" className="flex items-center gap-2.5" onClick={() => setOpen(false)}>
-          <span className="grid h-9 w-9 place-items-center rounded-xl bg-primary text-sm font-bold text-white">
-            KSA
-          </span>
+          <Logo size={40} priority />
           <span className="hidden flex-col leading-tight sm:flex">
             <span className="text-sm font-semibold">{site.fullName}</span>
             <span className="text-xs text-muted">{site.college}</span>

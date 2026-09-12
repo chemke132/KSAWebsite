@@ -21,7 +21,7 @@ export const categories: NavItem[] = [
   {
     href: "/resources",
     label: "Student Resources",
-    desc: "Academic planner plus how-to guides for Canvas and InSite.",
+    desc: "Planner, Canvas & InSite guides, plus health and insurance tips.",
     icon: "book",
     tone: "primary",
   },
@@ -33,9 +33,9 @@ export const categories: NavItem[] = [
     tone: "accent",
   },
   {
-    href: "/projects",
-    label: "Projects",
-    desc: "Individual and group student projects, kept in journal form.",
+    href: "/showcase",
+    label: "Showcase",
+    desc: "Individual and group student projects, posted in journal form.",
     icon: "rocket",
     tone: "primary",
   },
@@ -44,20 +44,6 @@ export const categories: NavItem[] = [
     label: "Mentorship",
     desc: "A program connecting mentors and mentees.",
     icon: "compass",
-    tone: "accent",
-  },
-  {
-    href: "/health",
-    label: "Health & Insurance",
-    desc: "Nearby clinics and helpful insurance tips.",
-    icon: "pulse",
-    tone: "primary",
-  },
-  {
-    href: "/journal",
-    label: "Journal",
-    desc: "Journal reports anyone can write (Notion-powered, coming soon).",
-    icon: "pen",
     tone: "accent",
   },
 ];

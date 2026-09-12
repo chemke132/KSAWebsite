@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { categories, site } from "@/lib/site";
+import Logo from "@/components/Logo";
 
 export default function Footer() {
   return (
@@ -7,9 +8,7 @@ export default function Footer() {
       <div className="container-page grid gap-8 py-12 sm:grid-cols-2 lg:grid-cols-4">
         <div className="sm:col-span-2 lg:col-span-1">
           <div className="flex items-center gap-2.5">
-            <span className="grid h-9 w-9 place-items-center rounded-xl bg-primary text-sm font-bold text-white">
-              KSA
-            </span>
+            <Logo size={40} />
             <span className="flex flex-col leading-tight">
               <span className="text-sm font-semibold">{site.fullName}</span>
               <span className="text-xs text-muted">{site.college}</span>
@@ -38,7 +37,7 @@ export default function Footer() {
             Contact
           </h3>
           <p className="mt-3 text-sm text-muted">
-            To reach the KSA board or submit a journal report, check the
+            To reach the KSA board or share a project in the showcase, check the
             instructions on each page.
           </p>
         </div>
