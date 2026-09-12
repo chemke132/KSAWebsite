@@ -10,7 +10,10 @@ export default function Footer() {
             <span className="grid h-9 w-9 place-items-center rounded-xl bg-primary text-sm font-bold text-white">
               KSA
             </span>
-            <span className="text-sm font-semibold">{site.fullName}</span>
+            <span className="flex flex-col leading-tight">
+              <span className="text-sm font-semibold">{site.fullName}</span>
+              <span className="text-xs text-muted">{site.college}</span>
+            </span>
           </div>
           <p className="mt-3 max-w-xs text-sm text-muted">{site.tagline}</p>
         </div>

@@ -8,7 +8,7 @@ export default function HealthPage() {
   return (
     <>
       <PageHeader
-        emoji="🏥"
+        icon="pulse"
         title="Health & Insurance"
         description="Information on nearby clinics and helpful tips about student insurance."
       />

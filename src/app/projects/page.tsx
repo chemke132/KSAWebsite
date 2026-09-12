@@ -8,7 +8,7 @@ export default function ProjectsPage() {
   return (
     <>
       <PageHeader
-        emoji="🚀"
+        icon="rocket"
         title="Projects"
         description="A space to document and share students' individual and group projects in journal form."
       />

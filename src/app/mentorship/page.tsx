@@ -8,7 +8,7 @@ export default function MentorshipPage() {
   return (
     <>
       <PageHeader
-        emoji="🧭"
+        icon="compass"
         title="Mentorship"
         description="A program that connects upperclassmen and newcomers to support academics, careers, and adjusting to school life."
       />

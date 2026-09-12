@@ -8,7 +8,7 @@ export default function ResourcesPage() {
   return (
     <>
       <PageHeader
-        emoji="📚"
+        icon="book"
         title="Student Resources"
         description="Practical guides for school life — the academic planner, plus how to use Canvas and InSite."
       />

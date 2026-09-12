@@ -11,7 +11,7 @@ export default async function JournalPage() {
   return (
     <>
       <PageHeader
-        emoji="📝"
+        icon="pen"
         title="Journal"
         description="Journal reports anyone can write — not just students. Write in Notion and it's published here."
       />

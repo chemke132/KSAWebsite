@@ -2,32 +2,40 @@
 
 :root {
   --background: #ffffff;
-  --surface: #f7f8fa;
-  --surface-2: #eef1f6;
-  --foreground: #131720;
-  --muted: #5b6472;
-  --border: #e4e8ef;
+  --surface: #f6f8fb;
+  --surface-2: #eef2f8;
+  --foreground: #101828;
+  --muted: #566072;
+  --border: #e2e8f1;
 
-  /* Brand — deep blue primary with a warm Korean-flag red accent */
-  --primary: #1d4ed8;
-  --primary-hover: #1e40af;
-  --primary-soft: #e8eefc;
-  --accent: #e11d48;
+  /* Brand — from the KSA crest: navy + Korean-flag red, with gold & green accents */
+  --primary: #1b3a5f; /* navy */
+  --primary-hover: #142c49;
+  --primary-soft: #e7eef5;
+  --accent: #cf3b34; /* red */
+  --accent-hover: #b5312b;
+  --accent-soft: #fae9e7;
+  --gold: #c19a3e;
+  --green: #4f9142;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0b0e14;
-    --surface: #121722;
-    --surface-2: #1a2130;
-    --foreground: #eef1f6;
-    --muted: #9aa4b2;
-    --border: #232b3a;
+    --background: #0a0e15;
+    --surface: #111725;
+    --surface-2: #182136;
+    --foreground: #eaf0f8;
+    --muted: #93a0b5;
+    --border: #22304a;
 
-    --primary: #5b8bff;
-    --primary-hover: #7ba2ff;
-    --primary-soft: #16233f;
-    --accent: #fb7185;
+    --primary: #6ea3d8; /* lighter navy for contrast */
+    --primary-hover: #8bb8e6;
+    --primary-soft: #13233b;
+    --accent: #f0685f;
+    --accent-hover: #f4837b;
+    --accent-soft: #2a1512;
+    --gold: #d9b45f;
+    --green: #6fb562;
   }
 }
 
@@ -42,6 +50,10 @@
   --color-primary-hover: var(--primary-hover);
   --color-primary-soft: var(--primary-soft);
   --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-soft: var(--accent-soft);
+  --color-gold: var(--gold);
+  --color-green: var(--green);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }

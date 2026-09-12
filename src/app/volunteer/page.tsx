@@ -37,7 +37,7 @@ export default function VolunteerPage() {
   return (
     <>
       <PageHeader
-        emoji="🤝"
+        icon="users"
         title="Volunteer"
         description="Organizations looking for volunteers, with contacts. Use the application format below to apply directly."
       />

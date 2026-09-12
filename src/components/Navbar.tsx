@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { categories, site } from "@/lib/site";
+import Icon from "@/components/Icon";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -21,7 +22,7 @@ export default function Navbar() {
           </span>
           <span className="hidden flex-col leading-tight sm:flex">
             <span className="text-sm font-semibold">{site.fullName}</span>
-            <span className="text-xs text-muted">Student Hub</span>
+            <span className="text-xs text-muted">{site.college}</span>
           </span>
         </Link>
 
@@ -66,7 +67,15 @@ export default function Navbar() {
                     isActive(c.href) ? "text-primary" : ""
                   }`}
                 >
-                  <span aria-hidden>{c.emoji}</span>
+                  <span
+                    className={`grid h-8 w-8 place-items-center rounded-lg ${
+                      c.tone === "accent"
+                        ? "bg-accent-soft text-accent"
+                        : "bg-primary-soft text-primary"
+                    }`}
+                  >
+                    <Icon name={c.icon} className="h-4 w-4" />
+                  </span>
                   <span>{c.label}</span>
                 </Link>
               </li>
