@@ -20,8 +20,8 @@ export default function Navbar() {
             KSA
           </span>
           <span className="hidden flex-col leading-tight sm:flex">
-            <span className="text-sm font-semibold">{site.fullNameKo}</span>
-            <span className="text-xs text-muted">{site.fullName}</span>
+            <span className="text-sm font-semibold">{site.fullName}</span>
+            <span className="text-xs text-muted">Student Hub</span>
           </span>
         </Link>
 
@@ -44,7 +44,7 @@ export default function Navbar() {
         {/* Mobile toggle */}
         <button
           type="button"
-          aria-label="메뉴 열기"
+          aria-label="Toggle menu"
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
           className="grid h-10 w-10 place-items-center rounded-lg border border-border lg:hidden"
@@ -68,7 +68,6 @@ export default function Navbar() {
                 >
                   <span aria-hidden>{c.emoji}</span>
                   <span>{c.label}</span>
-                  <span className="text-xs text-muted">{c.labelEn}</span>
                 </Link>
               </li>
             ))}

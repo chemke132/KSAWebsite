@@ -17,8 +17,8 @@ export default function Home() {
               🇰🇷 {site.fullName}
             </span>
             <h1 className="mt-6 text-4xl font-bold leading-tight tracking-tight sm:text-5xl">
-              {site.fullNameKo} 학생들을 위한
-              <br className="hidden sm:block" /> 모든 것을 한곳에
+              Everything for our KSA
+              <br className="hidden sm:block" /> community, in one place
             </h1>
             <p className="mx-auto mt-5 max-w-xl text-lg text-muted">
               {site.tagline}
@@ -28,13 +28,13 @@ export default function Home() {
                 href="/resources"
                 className="rounded-xl bg-primary px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-primary-hover"
               >
-                학생 자료 둘러보기
+                Browse resources
               </Link>
               <Link
                 href="/journal"
                 className="rounded-xl border border-border bg-surface px-5 py-3 text-sm font-semibold transition-colors hover:bg-surface-2"
               >
-                저널 리포트 보기
+                Read the journal
               </Link>
             </div>
           </div>
@@ -45,9 +45,9 @@ export default function Home() {
       <section className="container-page py-16">
         <div className="mb-8 flex items-end justify-between">
           <div>
-            <h2 className="text-2xl font-bold tracking-tight">둘러보기</h2>
+            <h2 className="text-2xl font-bold tracking-tight">Explore</h2>
             <p className="mt-1 text-sm text-muted">
-              필요한 정보를 카테고리별로 찾아보세요.
+              Find what you need, organized by category.
             </p>
           </div>
         </div>

@@ -45,9 +45,9 @@ export function ComingSoon({ note }: { note?: string }) {
   return (
     <div className="rounded-2xl border border-dashed border-border bg-surface/60 p-8 text-center">
       <div className="text-2xl">🚧</div>
-      <p className="mt-2 text-sm font-medium">준비 중이에요</p>
+      <p className="mt-2 text-sm font-medium">Coming soon</p>
       <p className="mx-auto mt-1 max-w-md text-sm text-muted">
-        {note ?? "곧 콘텐츠가 추가됩니다."}
+        {note ?? "Content will be added here shortly."}
       </p>
     </div>
   );

@@ -2,43 +2,44 @@ import type { Metadata } from "next";
 import PageHeader from "@/components/PageHeader";
 import { Section, Card, InfoBanner } from "@/components/ui";
 
-export const metadata: Metadata = { title: "학생 자료" };
+export const metadata: Metadata = { title: "Student Resources" };
 
 export default function ResourcesPage() {
   return (
     <>
       <PageHeader
         emoji="📚"
-        title="학생 자료"
-        titleEn="Student Resources"
-        description="학교생활에 필요한 플래너, Canvas · InSite 사용법 등 실용적인 안내를 모았습니다."
+        title="Student Resources"
+        description="Practical guides for school life — the academic planner, plus how to use Canvas and InSite."
       />
 
-      <Section title="학교 플래너 / Academic Planner">
+      <Section title="Academic Planner">
         <div className="grid gap-5 md:grid-cols-2">
-          <Card title="학기 플래너 활용법">
-            수업 일정, 과제 마감일, 시험 기간을 한눈에 정리하는 방법을 안내합니다.
+          <Card title="How to use the planner">
+            Keep your class schedule, assignment deadlines, and exam dates in one
+            place.
           </Card>
-          <Card title="학사 일정 (Academic Calendar)">
-            개강 · 종강, 방학, 공휴일 등 주요 학사 일정을 확인하세요.
+          <Card title="Academic Calendar">
+            Check key dates — start and end of term, breaks, and holidays.
           </Card>
         </div>
       </Section>
 
-      <Section title="플랫폼 사용법 / Platform Guides">
+      <Section title="Platform Guides">
         <div className="grid gap-5 md:grid-cols-2">
-          <Card title="Canvas 사용법">
-            과제 제출, 성적 확인, 알림 설정 등 Canvas 기본 사용법 안내.
+          <Card title="Using Canvas">
+            Submitting assignments, checking grades, and setting up notifications.
           </Card>
-          <Card title="InSite 사용법">
-            수강 신청, 성적표, 학생 정보 관리 등 InSite 이용 가이드.
+          <Card title="Using InSite">
+            Course registration, transcripts, and managing your student profile.
           </Card>
         </div>
       </Section>
 
       <Section>
         <InfoBanner>
-          찾는 자료가 없나요? 학생회 운영진에게 알려주시면 추가해 드릴게요.
+          Can&apos;t find what you&apos;re looking for? Let the KSA board know and
+          we&apos;ll add it.
         </InfoBanner>
       </Section>
     </>

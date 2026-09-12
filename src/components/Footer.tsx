@@ -10,14 +10,14 @@ export default function Footer() {
             <span className="grid h-9 w-9 place-items-center rounded-xl bg-primary text-sm font-bold text-white">
               KSA
             </span>
-            <span className="text-sm font-semibold">{site.fullNameKo}</span>
+            <span className="text-sm font-semibold">{site.fullName}</span>
           </div>
           <p className="mt-3 max-w-xs text-sm text-muted">{site.tagline}</p>
         </div>
 
         <div className="lg:col-span-2">
           <h3 className="text-xs font-semibold uppercase tracking-wider text-muted">
-            바로가기
+            Explore
           </h3>
           <ul className="mt-3 grid grid-cols-2 gap-2 text-sm">
             {categories.map((c) => (
@@ -32,11 +32,11 @@ export default function Footer() {
 
         <div>
           <h3 className="text-xs font-semibold uppercase tracking-wider text-muted">
-            문의
+            Contact
           </h3>
           <p className="mt-3 text-sm text-muted">
-            학생회 운영진에게 연락하거나 저널 리포트를 제출하려면 각 페이지의 안내를
-            확인하세요.
+            To reach the KSA board or submit a journal report, check the
+            instructions on each page.
           </p>
         </div>
       </div>

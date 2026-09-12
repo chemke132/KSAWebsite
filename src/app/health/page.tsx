@@ -2,42 +2,43 @@ import type { Metadata } from "next";
 import PageHeader from "@/components/PageHeader";
 import { Section, Card, InfoBanner } from "@/components/ui";
 
-export const metadata: Metadata = { title: "건강 · 보험" };
+export const metadata: Metadata = { title: "Health & Insurance" };
 
 export default function HealthPage() {
   return (
     <>
       <PageHeader
         emoji="🏥"
-        title="건강 · 보험"
-        titleEn="Health & Insurance"
-        description="주변 병원 정보와 학생 보험에 관한 유용한 팁을 정리했습니다."
+        title="Health & Insurance"
+        description="Information on nearby clinics and helpful tips about student insurance."
       />
 
-      <Section title="주변 병원 / Nearby Clinics">
+      <Section title="Nearby Clinics">
         <div className="grid gap-5 md:grid-cols-2">
-          <Card title="한국어 가능 병원">
-            한국어로 진료가 가능한 인근 병원 · 클리닉 목록 (업데이트 예정).
+          <Card title="Korean-speaking clinics">
+            A list of nearby clinics where care is available in Korean (coming
+            soon).
           </Card>
-          <Card title="응급 상황 / Emergency">
-            응급 시 연락처와 가까운 응급실 정보를 확인하세요.
+          <Card title="Emergency">
+            Emergency contacts and the nearest ER.
           </Card>
         </div>
       </Section>
 
-      <Section title="보험 팁 / Insurance Tips">
+      <Section title="Insurance Tips">
         <div className="grid gap-5 md:grid-cols-2">
-          <Card title="학생 보험 이해하기">
-            학교 보험 · 개인 보험의 차이와 가입 · 청구 방법 안내.
+          <Card title="Understanding student insurance">
+            The difference between school and personal plans, plus how to enroll
+            and file claims.
           </Card>
-          <Card title="자주 묻는 질문 (FAQ)">
-            진료비, 처방, 보험 청구 관련 자주 묻는 질문 모음.
+          <Card title="FAQ">
+            Common questions about costs, prescriptions, and insurance claims.
           </Card>
         </div>
         <div className="mt-5">
           <InfoBanner>
-            의료 정보는 참고용입니다. 응급 상황에서는 즉시 911(또는 현지 응급번호)에
-            연락하세요.
+            This information is for reference only. In an emergency, call 911 (or
+            your local emergency number) right away.
           </InfoBanner>
         </div>
       </Section>
