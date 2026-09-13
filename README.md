@@ -68,3 +68,44 @@ database and published to the site automatically.
    `export const runtime = "edge"` when deploying on Cloudflare Pages
 
 See the `ShowcasePost` type in `src/lib/notion.ts` for the expected data shape.
+
+## Contributing (team workflow)
+
+We don't push to `main` directly — every change goes through a pull request. This
+keeps the deployed site from breaking and makes changes easy to review and undo.
+
+**Getting access:** the repo owner adds you as a collaborator
+(GitHub → repo **Settings** → **Collaborators**). Accept the invite, then:
+
+```bash
+git clone https://github.com/chemke132/KSAWebsite.git
+cd KSAWebsite
+npm install
+npm run dev
+```
+
+**Making a change:**
+
+```bash
+git checkout -b your-branch-name     # work on a branch, not main
+# ...edit, then:
+git add -A && git commit -m "Describe your change"
+git push -u origin your-branch-name
+```
+
+Then open a **Pull Request** on GitHub and click **Merge** once it's ready.
+Before starting new work, `git pull` on `main` to stay up to date.
+
+Rough areas (coordinate before overlapping): pages/design, Notion showcase
+integration, content. Talk it out if two people need the same files.
+
+### One-time setup for the owner (branch protection)
+
+To enforce the above, the owner enables a branch ruleset once:
+GitHub → repo **Settings** → **Branches** → **Add branch ruleset**, target `main`,
+then turn on:
+
+- **Require a pull request before merging** (blocks direct pushes to `main`)
+- **Block force pushes** (protects history)
+- *(optional)* **Require approvals: 1** — leave off for faster self-merges;
+  turn on later if the team grows.
