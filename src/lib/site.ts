@@ -27,10 +27,10 @@ export const categories: NavItem[] = [
     tone: "primary",
   },
   {
-    href: "/volunteer",
-    label: "Volunteer",
-    desc: "A list of volunteer organizations with contacts and how to apply.",
-    icon: "users",
+    href: "/opportunities",
+    label: "Opportunities",
+    desc: "Volunteer programs, internships, research, and campus activities.",
+    icon: "compass",
     tone: "accent",
   },
   {
