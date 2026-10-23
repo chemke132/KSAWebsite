@@ -2,10 +2,14 @@ import type { Metadata } from "next";
 import PageHeader from "@/components/PageHeader";
 import { Section, Card, InfoBanner } from "@/components/ui";
 import Icon from "@/components/Icon";
+import HealthDirectory from "@/components/HealthDirectory";
+import { getHealthcareProviders } from "@/lib/notion";
 
 export const metadata: Metadata = { title: "Student Resources" };
 
-export default function ResourcesPage() {
+export default async function ResourcesPage() {
+  const providers = await getHealthcareProviders();
+
   return (
     <>
       <PageHeader
@@ -60,9 +64,10 @@ export default function ResourcesPage() {
 
       <Section title="Health & Insurance">
         <div className="grid gap-5 md:grid-cols-2">
-          <Card title="Korean-speaking clinics">
-            A list of nearby clinics where care is available in Korean (coming
-            soon).
+          <Card title="Find a provider">
+            Browse student-researched clinics by specialty, including
+            Korean-speaking providers.{" "}
+            <a href="#providers">Jump to the directory</a>
           </Card>
           <Card title="Emergency">
             Emergency contacts and the nearest ER.
@@ -81,6 +86,34 @@ export default function ResourcesPage() {
             local emergency number) right away.
           </InfoBanner>
         </div>
+      </Section>
+
+      <div id="providers" className="scroll-mt-20">
+        <Section title="Healthcare Provider Directory">
+          <p className="-mt-2 mb-6 max-w-2xl text-sm text-muted">
+            Local clinics researched and organized by bio and pre-health
+            students. Check whether your school insurance works, then book the
+            way each clinic recommends. Details can change, so confirm with the
+            provider before you go.
+          </p>
+          <HealthDirectory providers={providers} />
+        </Section>
+      </div>
+
+      <Section>
+        <Card title="Join the team: Healthcare Resources Researcher">
+          <p>
+            Help keep this directory accurate. We&apos;re looking for bio and
+            pre-health students to:
+          </p>
+          <ul className="mt-2 list-disc space-y-1 pl-5">
+            <li>Research local healthcare providers</li>
+            <li>Categorize clinics by specialty</li>
+            <li>Verify contact and appointment information</li>
+            <li>Maintain the student healthcare resource pages</li>
+          </ul>
+          <p className="mt-3">Interested? Let the KSA board know.</p>
+        </Card>
       </Section>
 
       <Section>
